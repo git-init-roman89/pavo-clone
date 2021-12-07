@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  background-image: linear-gradient(rgb(197, 234, 249), rgb(255, 255, 255));
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 19px;
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* typography */
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.app-download-subtitle {
+  font-size: 18px;
+  line-height: 28px;
+  color: #6b747b;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/* navigation */
+
+nav {
+  width: 35%;
+}
+
+.main-nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 133px;
+  max-width: 133px;
+  display: inline-block;
+  margin-right: 35px;
+}
+
+.main-nav a:link {
+  text-decoration: none;
+  color: #6b747b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.fa-apple {
+  font-size: 20px;
+  color: #594cda;
+  transition: all 0.2s ease;
+  margin-right: 5px;
+}
+
+.fa-android {
+  font-size: 18px;
+  color: #594cda;
+  transition: all 0.2s ease;
+}
+
+.fa-apple:hover,
+.fa-apple:focus,
+.fa-android:hover,
+.fa-android:focus,
+.main-nav a:hover,
+.main-nav a:focus,
+.fa-sort-down:hover,
+.fa-sort-down:focus {
+  color: #eb427e;
+}
+
+.fa-sort-down {
+  font-size: 10px;
+  color: #6b747b;
+  align-self: center;
+  margin-top: -2px;
+  margin-left: -16px;
+  transition: all 0.2s ease;
+}
+
+/* content sections */
+/* home section */
+
+.home {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 176px 7px 128px 65px;
+}
+
+.app-download-btn {
+  margin-top: 118px;
+  line-height: 60px;
+  color: #252c38;
+  width: 40%;
+  margin-right: 11px;
+}
+
+.app-download-img {
+  width: 40%;
+}
+
+/* buttons styling*/
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+  padding: 15px 42px;
+  border-radius: 32px;
+  border: 1px solid gray;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.apple-btn {
+  color: white;
+  background-color: #594cda;
+  border: #594cda 1px solid;
+}
+
+.android-btn {
+  color: white;
+  background-color: #eb427e;
+  margin-left: 10px;
+  border: #eb427e 1px solid;
+}
+
+.btn .fa-apple {
+  color: white;
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+.btn .fa-android {
+  color: white;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.apple-btn:hover,
+.apple-btn:focus {
+  color: #594cda;
+  background-color: rgb(89, 77, 219, 0);
+  border: #594cda 1px solid;
+}
+
+.android-btn:hover,
+.android-btn:focus {
+  color: #eb427e;
+  background-color: rgb(89, 77, 219, 0);
+  border: #eb427e 1px solid;
+}
+
+.btn .fa-apple:hover,
+.btn .fa-apple:focus {
+  color: #594cda;
+}
+
+.btn .fa-android:hover,
+.btn .fa-android:focus {
+  color: #eb427e;
+}
+
+/* end of buttons styling*/
+
+.banner-container {
+  width: 100%;
+  text-align: center;
+}
+
+.banner {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  line-height: 42px;
+  color: #252c38;
+  background-color: white;
+  margin: 0 280px;
+  padding-bottom: 150px;
+}
+
+/* features section */
+
+.pavo-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 55px 26px;
+  justify-content: center;
+  width: 73%;
+  margin: 0 auto;
+  padding-bottom: 146px;
+}
+
+.feature-item {
+  background-color: #f1f9fc;
+  text-align: center;
+  border-radius: 16px;
+  color: #6b747b;
+  padding: 50px 20px;
+}
+
+.feature-item h2 {
+  font-size: 20px;
+  color: #252c38;
+  margin-bottom: 10px;
+}
+
+.feature-item-image {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+}
+
+.feature-item-text {
+  width: 250px;
+  margin: 0 auto;
+  line-height: 24px;
+}
+
+/* details section */
+
+.details {
+  display: grid;
+  grid-template-columns: 440px 579px;
+  grid-gap: 160px 90px;
+  justify-content: center;
+  padding-bottom: 146px;
+}
+
+.details-item-1 {
+  grid-area: 1 / 1;
+}
+
+.details-item-1 h2,
+.details-item-2 h2,
+.details-item-3 h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 34px;
+  color: #252c38;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  line-height: 42px;
+}
+
+.details-item-1,
+.details-item-2,
+.details-item-3 {
+  margin-top: 35px;
+}
+
+.details-item-text {
+  font-family: "Open Sans", sans-serif;
+  color: #6b747b;
+  line-height: 26px;
+}
+
+.details-item-image-1 {
+  grid-area: 1 / 2;
+  width: 100%;
+  height: auto;
+}
+
+.details-item-2 {
+  grid-area: 2 / 2;
+  margin-left: 130px;
+}
+
+.details-item-2 ul {
+  list-style: none;
+  margin-left: -35px;
+}
+
+.details-item-list {
+  font-family: "Open Sans", sans-serif;
+  color: #6b747b;
+  line-height: 36px;
+}
+
+.fa-chevron-right {
+  margin-right: 8px;
+  color: #594cda;
+}
+
+.details-btn {
+  border: 1px solid #252c38;
+  background-color: white;
+  color: #252c38;
+}
+
+.details-item-image-2 {
+  grid-area: 2 / 1;
+  width: 579px;
+  height: auto;
+}
+
+.details-item-3 {
+  grid-area: 3 / 1;
+}
+
+.details-item-image-3 {
+  grid-area: 3 / 2;
+  width: 579px;
+  width: 100%;
+  height: auto;
+}
+
+.details-numbers {
+  display: flex;
+  grid-area: 4 / span 2;
+}
+
+.details-numbers {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -95px;
+}
+
+.details-btn:hover,
+.details-btn:focus {
+  color: white;
+  background-color: #252c38;
+  border: #252c38 1px solid;
+}
+
+/* details numbers styling*/
+
+.counter-item {
+  font-family: "Open Sans", sans-serif;
+  font-size: 60px;
+  color: #252c38;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.counter-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #6b747b;
+  margin-top: 0;
+  text-align: center;
+}
+
+/* details user slider styling*/
+
+.feedback-section {
+  padding: 150px 0;
+  background-color: #f1f9fc;
+  width: 100%;
+}
+
+.feedback-slider {
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
+}
+
+.feedback-persom-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.feedback-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 34px;
+  color: #252c38;
+  margin-top: 0;
+}
