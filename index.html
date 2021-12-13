@@ -9,50 +9,60 @@
     <script src="https://kit.fontawesome.com/bf33c4f0ab.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="slider.js" defer></script> 
+<script src="counter.js" defer></script> 
 </head>
 <body>
-    <header id="header">
-        <img src="img/logo.svg" alt="pavo logo" id="header-img" class="logo">
-        <nav id="nav-bar">
-            <ul class="main-nav" >
-                <li class="nav-link"><a href="#home">Home</a></li>
-                <li class="nav-link"><a href="#features">Features</a></li>
-                <li class="nav-link"><a href="#details">Details</a></li>
-                <li class="nav-link"><a href="#pricing">Pricing</a></li>
-                <li class="nav-link"><a href="#">Drop
-                <!-- <p><a>Article Details</a></p>
-                <p><a>Terms Conditions</a></p>
-                <p><a>Privacy Policy</a></p> -->
-                </a></li>
-                <i class="fas fa-sort-down"></i>
-                <li class="nav-link"><a href="#download">Download</a></li>
-                <div>
-                <i class="fab fa-apple"></i>
-                <i class="fab fa-android"></i>
-                </div>
-            </ul>
-        </nav>
-    </header>
     <main>
         <section class="home">
-            <div class="app-download-btn">
+            <header id="header">
+                <img src="img/logo.svg" alt="pavo logo" id="header-img" class="logo">
+                <nav id="nav-bar" class="nav-bar">
+                    <ul class="main-nav" >
+                        <li class="nav-link"><a href="#home">Home</a></li>
+                        <li class="nav-link"><a href="#features">Features</a></li>
+                        <li class="nav-link"><a href="#details">Details</a></li>
+                        <li class="nav-link"><a href="#pricing">Pricing</a></li>
+                        <li class="nav-link">
+                            <a href="#">Drop
+                                <i class="fas fa-sort-down"></i>
+                                <div class="dropdown">
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a>Article Details</a></div>
+                                    <div class="dropdown-item"><a>Terms Conditions</a></div>
+                                        <div class="dropdown-item no-border"><a>Privacy Policy</a></div>
+                                        </div>
+                                    </div>
+                            </a>
+                    </li>
+                        <li class="nav-link nav-link-download"><a href="#download">Download</a></li>
+                        <div>
+                        <i class="fab fa-apple"></i>
+                        <i class="fab fa-android"></i>
+                        </div>
+                    </ul>
+                </nav>
+            </header>
+            <div class="app-download-section">
                 <h1>Team management mobile application</h1>
                 <h2 class="app-download-subtitle">Start getting things done together with your team based <br>
                     on Pavo's revolutionary team management features</h2>
+                    <div>
                 <button class="btn apple-btn"><i class="fab fa-apple"></i>Download</button>
                 <button class="btn android-btn"><i class="fab fa-android"></i>Download</button>
+                </div>
             </div>
             <div class="app-download-img">
                 <img src="img/header-smartphone.png" alt="smartphone with pavo app installed" class="header-smartphone">
             </div>
+            <div class="banner-container">
+                <div class="banner">
+                Team management mobile apps don’t get better than Pavo. 
+                It’s probably the best app in the world for this purpose. Don't hesitate to give it a 
+                try today and you will fall in love with it</div>
+            </div>
         </section>
-        <div class="banner-container">
-            <div class="banner">
-            Team management mobile apps don’t get better than Pavo. 
-            It’s probably the best app in the world for this purpose. Don’t hesitate to give it a 
-            try today and you will fall in love with it</div>
-        </div>
             <section id="features" class="pavo-features">
                 <div class="feature-item">
                     <img src="img/features-icon-1.svg" alt="" class="feature-item-image">
@@ -116,7 +126,7 @@
                 </div>
                 <img src="img/details-2.jpg" alt="pavo marketing app" class="details-item-image-2">
                 <div class="details-item-3">
-                    <span class="details-item-title">
+                    <span class="details-item-title" id="startAnimateNum">
                         <h2>Platform integration and life time free updates</h2>
                     </span>
                     <p class="details-item-text">
@@ -128,23 +138,23 @@
                 <img src="img/details-3.jpg" alt="pavo trending app" class="details-item-image-3">
                 <div class="details-numbers">
                     <div class="details-number-item">
-                        <p class="counter-item">231</p>
+                        <p class="counter-item" id="happy-users">231</p>
                         <p class="counter-text">Happy Users</p>
                     </div>
                     <div class="details-number-item">
-                        <p class="counter-item">385</p>
+                        <p class="counter-item" id="issues-solved">385</p>
                         <p class="counter-text">Issues Solved</p>
                     </div>
                     <div class="details-number-item">
-                        <p class="counter-item">159</p>
+                        <p class="counter-item" id="good-reviews">159</p>
                         <p class="counter-text">Good Reviews</p>
                     </div>
                     <div class="details-number-item">
-                        <p class="counter-item">127</p>
+                        <p class="counter-item" id="case-studies">127</p>
                         <p class="counter-text">Case Studies</p>
                     </div>
                     <div class="details-number-item">
-                    <p class="counter-item">211</p>
+                    <p class="counter-item" id="orders-received">211</p>
                     <p class="counter-text">Orders Received</p>
                 </div>
                 </div>
@@ -152,18 +162,18 @@
             <div class="feedback-section">
                 <div class="feedback-slider">
                 <h2 class="feedback-title">What do users think about Pavo</h2>
-                <article class="feedback-text">
+                <article id="feedback-text">
                     <div class="feedback-img-container">
                       <img src="img/testimonial-1.jpg" alt="person image" id="person-img" class="feedback-persom-image"></img>
                     </div>
-                    <p id="feedback-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                      eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim
-                      veniam, quis nostrud exercitation ullamco laboris nisiut aliquip ex ea
-                      commodo consequat.</p>
-                      <h3 id="-feedback-author">Jude Thorn - Designer</h3>
+                    <p id="feedback-info" class="feedback-info">It's been so fun to work with Pavo, I've managed to integrate it properly into my business flow and it's great</p>
+                    <div class="accent">
+                        <span id="author">Jude Thorn</span>
+                        <span id="job">Designer</span>
+                      </div>
                     <div class="button-container">
-                      <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-                      <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                      <button type="button" class="prev-btn feedback-btn"><i class="fas fa-chevron-left"></i></button>
+                      <button type="button" class="next-btn feedback-btn"><i class="fas fa-chevron-right"></i></button>
                     </div>
                   </article>
             </div>
